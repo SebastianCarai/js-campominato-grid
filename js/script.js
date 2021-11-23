@@ -1,6 +1,9 @@
 // ---------
 // FUNCTIONS
 // ---------
+
+// Resetting the box everytime you click "play". Then it takes the value of the select and uses it to create the right number of boxes and to give them the right
+// height and width.
 function generateBoxes (){
     gridContainer.innerHTML = '';
     const value = document.getElementById('difficulty_select').value;
@@ -19,6 +22,7 @@ function generateBoxes (){
 
 }
 
+// Activating the clicked box
 function activatingBox(){
     this.classList.add('active');
 }
