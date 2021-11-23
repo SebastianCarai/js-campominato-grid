@@ -66,6 +66,9 @@ main{
     justify-content: center;
     align-items: center;
 }
+.box.active{
+    background-color: #6495ed;
+}
 
 
 

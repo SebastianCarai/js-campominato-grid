@@ -13,7 +13,14 @@ function generateBoxes (){
         newBox.style.width = `calc(100% / ${Math.sqrt(value)})`;
         newBox.style.height = `calc(100% / ${Math.sqrt(value)})`;
         gridContainer.append(newBox);
+
+        newBox.addEventListener('click', activatingBox);
     } 
+
+}
+
+function activatingBox(){
+    this.classList.add('active');
 }
 
 
@@ -25,4 +32,3 @@ const playBtn = document.getElementById('play_btn');
 const gridContainer = document.querySelector('.grid_container');
 
 playBtn.addEventListener('click', generateBoxes);
-
