@@ -6,7 +6,7 @@
 // height and width.
 function generateBoxes (){
     gridContainer.innerHTML = '';
-    const value = document.getElementById('difficulty_select').value;
+    const value = parseInt(document.getElementById('difficulty_select').value);
     console.log(value); 
 
     for (i=1; i<=value; i++){
@@ -17,6 +17,7 @@ function generateBoxes (){
         newBox.style.height = `calc(100% / ${Math.sqrt(value)})`;
         gridContainer.append(newBox);
 
+        // Calling the activating function
         newBox.addEventListener('click', activatingBox);
     } 
 
